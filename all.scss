@@ -1,0 +1,188 @@
+@import './node_modules/bootstrap/scss/bootstrap-grid';
+@import './node_modules/bootstrap/scss/bootstrap-reboot';
+
+$dark: #000;
+$dark-gray: #555555;
+
+$primary: #ff7a00;
+$primary-light: #ff9900;
+$secondary: #3586ff;
+$secondary-light: rgba(#0065fc, 0.5);
+
+.open-sans-extrabold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+.noto-sans-light {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 300;
+}
+.noto-sans-black {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 900;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-image: linear-gradient(to bottom, #fff, #E9E9E9);
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// 導覽列
+.brand {
+  font-size: 24px;
+}
+.navbar {
+  background-color: rgba(white, 0.3);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  .navbar-list {
+    display: flex;
+    align-items: center;
+  }
+  .list-item {
+    display: inline-block;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: $dark;
+    transition: color 0.15s ease-in-out;
+    &:hover,
+    &.active {
+      color: $primary;
+    }
+  }
+}
+
+// header
+.header {
+  overflow: hidden;
+  .header-content {
+    padding-top: 244px;
+    padding-bottom: 244px;
+  }
+}
+
+.person-image {
+  padding-top: 30px;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 0 4px;
+  margin-right: 6px;
+  text-decoration: none;
+  color: $dark-gray;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 36px;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(to bottom, $primary, $primary-light);
+  box-shadow: $primary-light 0px 0px 0px;
+  transition: box-shadow 0.15s ease-in-out;
+  &:hover {
+    color: white;
+    background-image: linear-gradient(to bottom, $primary, $primary-light);
+    box-shadow: $primary-light 5px 5px 15px;
+  }
+}
+
+.section {
+  padding: 100px 0;
+  background-color: #ddd;
+}
+
+.type-blink {
+  width: 3px;
+  height: 68px;
+  background-image: linear-gradient(to bottom, $secondary, $secondary-light);
+  position: absolute;
+  right: -10px;
+  top: 55%;
+  transform: translateY(-50%);
+  animation: blink 1s infinite;
+}
+
+// animation
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+// utilities
+.d-inline-block {
+  display: inline-block;
+}
+.display-h1 {
+  font-size: 60px;
+  line-height: 1.2;
+}
+.text-dark-gray {
+  color: $dark-gray;
+}
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.px-60 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.z-index--1 {
+  z-index: -1;
+}
